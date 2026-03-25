@@ -9,6 +9,7 @@ the first commit
 
 # DrishtiChaudhary_24-3-26_Day-1.md
 - Code:
+```
 class Solution {
     public int maxProfit(int[] prices) {
         int buyPrice = Integer.MAX_VALUE;
@@ -27,6 +28,41 @@ class Solution {
         return maxProfit;
     }
 }
+```
 
 - Screenshot:
   <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/3468aa89-ba47-4076-a67b-12d24cf85f0c" />
+
+# DrishtiChaudhary_25-3-26_Day-1.md
+- Code:
+```
+class Solution {
+    public int missingNumber(int[] nums) {
+        Arrays.sort(nums);
+        HashSet<Integer> set = new HashSet<>();
+        HashSet<Integer> set2 = new HashSet<>();
+
+        for(int i=0; i<=nums.length; i++){
+            set.add(i);
+        }
+
+        for(int i=0; i<nums.length; i++){
+            set2.add(nums[i]);
+        }
+
+        int res=0;
+
+        for(int val:set){
+            if(!set2.contains(val)){
+                res=val;
+            }
+        }
+
+        return res;
+    }
+}
+```
+
+- Screenshot:
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/5208a416-e786-43c5-8cd0-f45847e37556" />
+
