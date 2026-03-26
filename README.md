@@ -66,3 +66,23 @@ class Solution {
 - Screenshot:
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/5208a416-e786-43c5-8cd0-f45847e37556" />
 
+# DrishtiChaudhary_26-3-26_Day-1.md
+- Code:
+```
+class Solution {
+    public void moveZeroes(int[] nums) {
+        for(int i=0; i<nums.length; i++){
+            for(int j=i+1; j<nums.length; j++){
+                if(nums[i] == 0 && nums[j] != 0){
+                    int temp = nums[i];
+                    nums[i] = nums[j];
+                    nums[j] = temp;
+                }
+            }
+        }
+    }
+}
+```
+- Screenshot:
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/edb3f8ab-3740-4274-b468-6ed702106c4c" />
+
