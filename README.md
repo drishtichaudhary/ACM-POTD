@@ -86,3 +86,44 @@ class Solution {
 - Screenshot:
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/edb3f8ab-3740-4274-b468-6ed702106c4c" />
 
+# DrishtiChaudhary_27-3-26_Day-1.md
+- INTERMEDIATE
+- Code:
+```
+class Solution {
+    public List<List<Integer>> threeSum(int[] nums) {
+        if(nums == null || nums.length<3){
+            return new ArrayList<>();
+        }
+
+        //sort elements
+        Arrays.sort(nums);
+        Set<List<Integer>> result = new HashSet<>();
+
+        //now fix 1st element and find the rest 2 elements
+        for(int i=0; i<nums.length-2; i++){
+            //find other elements using 2Sum
+            int left = i+1;
+            int right = nums.length-1;
+
+            while(left < right){
+                int sum = nums[i] + nums[left] + nums[right];
+
+                if(sum == 0){
+                    result.add(Arrays.asList(nums[i], nums[left], nums[right]));
+                    left++;
+                    right--;
+                } else if(sum < 0){
+                    left++;
+                } else{
+                    right--;
+                }
+            }
+        }
+        return new ArrayList<>(result);
+    }
+}
+```
+- Screenshot:
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/d32b2907-8632-49ef-8371-c957ae76f430" />
+
