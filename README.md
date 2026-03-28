@@ -127,3 +127,35 @@ class Solution {
 - Screenshot:
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/d32b2907-8632-49ef-8371-c957ae76f430" />
 
+# DrishtiChaudhary_28-3-26_Day-1.md
+189. Rotate Array
+- Beginner
+- Code:
+```
+class Solution {
+    public void rotate(int[] nums, int k) {
+        int n = nums.length;
+        k = k % n; //handle cases where k > n
+
+        //reverse the entire array
+        reverse(nums, 0, n - 1);
+        //reverse the first k elements
+        reverse(nums, 0, k - 1);
+        //reverse the remaining elements
+        reverse(nums, k, n - 1);
+    }
+
+    public void reverse(int[] nums, int start, int end) {
+        while (start < end) {
+            int temp = nums[start];
+            nums[start] = nums[end];
+            nums[end] = temp;
+
+            start++;
+            end--;
+        }
+    }
+}
+```
+- Screenshot:
+<img width="1919" height="1027" alt="image" src="https://github.com/user-attachments/assets/783f7e4a-abe3-475b-b6f5-50e0e422cc5b" />
