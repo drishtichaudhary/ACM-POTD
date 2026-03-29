@@ -159,3 +159,38 @@ class Solution {
 ```
 - Screenshot:
 <img width="1919" height="1027" alt="image" src="https://github.com/user-attachments/assets/783f7e4a-abe3-475b-b6f5-50e0e422cc5b" />
+
+# DrishtiChaudhary_29-3-26_Day-1.md
+206. Reverse Linked List
+- Code:
+```
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode reverseList(ListNode head) {
+        ListNode prev = null;
+        ListNode curr = head;
+        ListNode next;
+
+        while(curr!=null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+
+        head = prev;
+        return head;
+    }
+}
+```
+- Screenshot:
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/247dad14-25c2-405a-890d-06d72abb453e" />
