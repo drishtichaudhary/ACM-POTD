@@ -194,3 +194,38 @@ class Solution {
 ```
 - Screenshot:
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/247dad14-25c2-405a-890d-06d72abb453e" />
+
+# DrishtiChaudhary_30-3-26_Day-1.md
+141. Linked List Cycle
+- Code:
+```
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) {
+ *         val = x;
+ *         next = null;
+ *     }
+ * }
+ */
+public class Solution {
+    public boolean hasCycle(ListNode head) {
+        HashSet<ListNode> set = new HashSet<>();
+
+        ListNode temp = head;
+        while(temp!=null){
+            if(set.contains(temp)){ //agar element set mein already hai -> cycle hoga, kyuki node humesha unique hogi "no cycle" wali linked list mein
+                return true; //cylce present hai
+            }
+            set.add(temp);
+            temp = temp.next;
+        }
+
+        return false; //no cycle
+    }
+}
+```
+- Screenshot:
+<img width="1919" height="1078" alt="image" src="https://github.com/user-attachments/assets/dd0a362e-e0a9-4579-9661-4a638f10fb32" />
