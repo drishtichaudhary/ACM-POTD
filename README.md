@@ -229,3 +229,42 @@ public class Solution {
 ```
 - Screenshot:
 <img width="1919" height="1078" alt="image" src="https://github.com/user-attachments/assets/dd0a362e-e0a9-4579-9661-4a638f10fb32" />
+
+# DrishtiChaudhary_31-3-26_Day-1.md
+21. Merge Two Sorted Lists
+- Code:
+```
+class Solution {
+    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+        ListNode temp1 = list1;
+        ListNode temp2 = list2;
+        
+        ListNode returnNode = new ListNode(Integer.MIN_VALUE);
+        ListNode headNode = returnNode;
+
+        while(temp1 != null && temp2 != null){
+
+            if(temp1.val > temp2.val){
+                returnNode.next = temp2;
+                temp2 = temp2.next;
+            } else{
+                returnNode.next = temp1;
+                temp1 = temp1.next;
+            }
+
+            returnNode = returnNode.next;
+        }
+
+        if(temp1 == null){
+            returnNode.next = temp2;
+        } else if(temp2 == null){
+            returnNode.next = temp1;
+        }
+
+        return headNode.next;
+    }
+}
+```
+- Screenshot:
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/e5258e40-d640-4ef6-bee3-38b435e8d0e4" />
+
