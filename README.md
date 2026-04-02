@@ -306,4 +306,23 @@ class Solution {
 - Screenshot:
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/ef1bf3ee-fc73-4fca-b914-76e1007e8db8" />
 
-
+# DrishtiChaudhary_2-4-26_Day-1.md
+83. Remove duplicates from sorted list
+- Code:
+```
+class Solution {
+    public ListNode deleteDuplicates(ListNode head) {
+        ListNode curr = head;
+        while (curr != null && curr.next != null) {
+            if (curr.val == curr.next.val) {
+                curr.next = curr.next.next;
+            } else {
+                curr = curr.next;
+            }
+        }
+        return head;
+    }
+}
+```
+- Screenshot:
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/ef02df6b-d35a-4535-a59d-83111d8e7fab" />
