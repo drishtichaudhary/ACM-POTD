@@ -326,3 +326,41 @@ class Solution {
 ```
 - Screenshot:
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/ef02df6b-d35a-4535-a59d-83111d8e7fab" />
+
+# DrishtiChaudhary_5-4-26_Day-1.md
+- Code:
+```
+class Solution {
+    public boolean isValid(String s) {
+        Deque<Character> stack = new ArrayDeque<>();
+
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+
+            //opening bracket -> push
+            if (ch == '(' || ch == '[' || ch == '{') {
+                stack.push(ch);
+            } 
+            else { //closing bracket
+
+                if (stack.isEmpty()) return false;
+
+                char top = stack.peek();
+
+                if ((top == '(' && ch == ')') ||
+                    (top == '[' && ch == ']') ||
+                    (top == '{' && ch == '}')) {
+                    stack.pop();
+                } else {
+                    return false;
+                }
+            }
+        }
+
+        return stack.isEmpty();
+    }
+}
+```
+- Screenshot:
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/40aa176e-781d-4bbe-a6bb-aa21a9331317" />
+
