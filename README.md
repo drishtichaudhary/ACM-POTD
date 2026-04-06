@@ -364,3 +364,56 @@ class Solution {
 - Screenshot:
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/40aa176e-781d-4bbe-a6bb-aa21a9331317" />
 
+# DrishtiChaudhary_6-4-26_Day-1.md
+```
+class MyQueue {
+    Stack<Integer> s1 = new Stack<>();
+    Stack<Integer> s2 = new Stack<>();
+
+    public MyQueue() {
+
+    }
+    
+    public void push(int x) {
+        //push all elements of stack 1 in stack1
+        while(!s1.isEmpty()){
+            s2.push(s1.pop());
+        }
+        // add the new element in stack1
+        s1.push(x);
+        //push all elements from stack2 back in stack1
+        while(!s2.isEmpty()){
+            s1.push(s2.pop());
+        }
+    }
+    
+    public int pop() {
+        if(empty()){
+            return -1;
+        }
+        return s1.pop();
+    }
+    
+    public int peek() {
+        if(empty()){
+            return -1;
+        }
+        return s1.peek();
+    }
+    
+    public boolean empty() {
+        return s1.isEmpty();
+    }
+}
+
+/**
+ * Your MyQueue object will be instantiated and called as such:
+ * MyQueue obj = new MyQueue();
+ * obj.push(x);
+ * int param_2 = obj.pop();
+ * int param_3 = obj.peek();
+ * boolean param_4 = obj.empty();
+ */
+```
+- Screenshot:
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/9872d9b7-d16f-40f3-98a9-6086f04ac68f" />
