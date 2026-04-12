@@ -433,3 +433,8 @@ class MyQueue {
 # DrishtiChaudhary_10-4-26_Day-1.md
 - Screenshot:
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/b6b492ad-ee77-4572-801f-b4e4faa2c1df" />
+
+# DrishtiChaudhary_12-4-26_Day-1.md
+- Screenshot:
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/ac2339bb-591f-4af2-b79e-7af674fad99e" />
+
